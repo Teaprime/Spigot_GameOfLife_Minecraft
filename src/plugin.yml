@@ -1,0 +1,25 @@
+name: GameOfLife
+version: 1.2.1
+author: Zedan Hussain
+main: ml.dyropedia.GameOfLife.GameOfLife
+api-version: 1.17
+
+commands:
+  gol:
+    Description: Base Command for GOL plugin. Spawns board where game will occur.
+    usage: /<command> <amount between 1 and 200> <Dead cell Block> <Live cell block>
+    permission: GameOfLife.gol
+    permission-message: You don't have the required permissions
+  golstart:
+    description: Start the Game Of Life on created board.
+    usage: /<command> <Tick speed in ticks>
+    permission: GameOfLife.golstart
+    permission-message: You don't have the required permissions
+
+  permissions:
+    GameOfLife.gol:
+      description: Allows board creation and setting of block types command
+      default: op
+    GameOfLife.golstart:
+      description: Allows start and stop of the Game of Life
+      default: op
